@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Muli;
+    src: url(./Muli-Bold.ttf) format('truetype'),
+        url(./Muli-BoldItalic.ttf) format('truetype'),
+        url(./Muli-ExtraBold.ttf) format('truetype'),
+        url(./Muli-ExtraBoldItalic.ttf) format('truetype'),
+        url(./Muli-ExtraLight.ttf) format('truetype'),
+        url(./Muli-ExtraLightItalic.ttf) format('truetype'),
+        url(./Muli-Italic.ttf) format('truetype'),
+        url(./Muli-Light.ttf) format('truetype'),
+        url(./Muli-LightItalic.ttf) format('truetype'),
+        url(./Muli-Regular.ttf) format('truetype'),
+        url(./Muli-SemiBold.ttf) format('truetype'),
+        url(./Muli-SemiBoldItalic.ttf) format('truetype')
+}

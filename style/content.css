@@ -1,0 +1,221 @@
+.content{
+    box-sizing:border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: white;
+    font-family: Muli;
+    padding: 13% 13% 0 13%;
+    font-size: 20px;
+}
+
+.content_title{
+    box-sizing:border-box;
+    font-family: Muli;
+    font-weight: bold;
+    font-size: 46px;
+    margin: 0 0 50px 0;
+}
+.content_text{
+    box-sizing:border-box;
+    margin-bottom: 50px;
+    line-height: 1.8;
+    letter-spacing: -0.5px;
+    font-size: inherit;
+    font-family: inherit;
+}
+.content_conteiner{
+    box-sizing:border-box;
+    overflow: inherit;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 250px;
+}
+.content_left{
+    box-sizing:border-box;
+    max-width: 720px;
+    font-family: inherit;
+}
+
+.content_left > ul > li{
+    box-sizing:border-box;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.picture_content{
+    box-sizing:border-box;
+    max-width: 600px;
+}
+.picture_content > img{
+    max-width: 600px;
+}
+.wideo_background{
+    height: 600px;
+    width: 600px;
+    z-index: 0;
+    background-image: url(../picture/slide1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wideo_foreground{
+    height: 600px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wideo_foreground:hover{
+    cursor: pointer;
+}
+.play_button{
+    border-radius: 50%;
+    height: 20%;
+    width: 20%;
+    background-color: rgba(0, 162, 255, 0.507);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play{
+    width: 0;
+    height: 0;
+    border-radius: 20%;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 40px solid #4400ff;
+    margin-left: 10px;
+}
+.pop_upWideo{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.589);
+
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.pop_upWideoActive{
+    display:flex;
+    animation: popUp 1s both;
+    animation-timing-function: cubic-bezier(.01,1.02,.88,.99);
+}
+.wideo{
+    width: 1280px;
+    height: 720px;
+}
+.err{
+    color: red;
+    font-weight: bold;
+}
+
+
+@media (max-width: 480px){
+    .content{
+        align-items: center;
+        font-size: 16px;
+    }
+    .content_conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .picture_content > img{
+        margin: 0;
+        max-width: 80vw;
+    }
+    .wideo{
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+    .wideo_background{
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+    .wideo_foreground{
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+    .play{
+
+        border-radius: 10%;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 25px solid #4400ff;
+        margin-left: 7px;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 1200px){
+    .content{
+        align-items: center;
+    }
+    .content_conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .picture_content{
+        box-sizing:border-box;
+        max-width: 600px;
+        justify-content: center;
+        margin: 0;
+        margin-top: 50px;
+    }
+    .picture_content > img{
+        margin: 0;
+
+    }
+    .content_left,.content_text,.picture_content,.content_right{
+        align-items: center;
+        justify-content: center;
+    }
+    .wideo{
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1800px){
+    .picture_content{
+        margin: 0 50px 0 50px;
+        display: flex;
+        align-items: center;
+    }
+    .content_wideo{
+        margin-left: 50px;
+    }
+}
+
+
+@keyframes popUp{
+    0%{
+        display: none;
+        margin-top: -100vh;
+    }
+    99%{
+        display: block;
+        margin: 0;
+        backdrop-filter: blur(0);
+    }
+    100%{
+        backdrop-filter: blur(5px);
+        display: block;
+        margin: 0;
+    }
+}

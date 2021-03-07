@@ -1,0 +1,209 @@
+footer{
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+}
+.footer_conteiner{
+    margin: 85px 250px 85px 250px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-family: Muli;
+}
+.footer{
+    background-color: #001927;
+    width: 100%;
+    position: relative;
+}
+.map_footer{
+    margin-top: 50px;
+}
+#gmap_canvas{
+    height: 230px;
+    width: 230px;
+}
+.column_footer > ul{
+    list-style: none;
+}
+.column_footer > ul > a{
+    text-decoration: none;
+    color: white;
+    
+}
+.column_footer > ul > li{
+    margin: 20px 0;
+}
+.column_footer > ul > li >a{
+    text-decoration: none;
+    color: white;
+}
+.foter_address{
+    margin-right: 50px;
+}
+.foter_address > ul > li{
+    margin: 5px 0;
+    white-space: nowrap;
+}
+.foter_address > ul{
+    padding: 0;
+}
+.author_info{
+    font-size: 17px;
+    font-family: Muli;
+    margin: 0 10% 2% 0;
+    float: right;
+}
+.about,.candidate,.student,.biznes,.shortcuts{
+    font-size: 18px;
+    font-weight: bold;
+}
+@media (max-width: 750px){
+    .footer{
+        height: auto;
+    }
+    .about,.candidate,.student,.biznes,.shortcuts{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .footer_conteiner{
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_conteiner{
+        margin:20px 20px 20px 0px;
+        justify-content: space-around;
+    }
+    .column_footer > ul > a{
+        font-weight: bold;
+    }
+    
+    .foter_address{
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        top: 20px;
+        right: 20px;
+    }
+    .map_footer{
+        display: block;
+    }
+    #gmap_canvas{
+        height: 100px;
+        width: 100px;
+    }
+    .footer_menu{
+        display: none;
+    }
+    .activeFooter{
+        display: block;
+        animation: unroling 1s both;
+    }
+    .author_info{
+        display: flex;
+        justify-content: center;
+        position: unset;
+        float: none;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+@media (min-width: 750px) and (max-width: 1024px){
+    .footer{
+        height: 50vh;
+    }
+    .about,.candidate,.student,.biznes,.shortcuts{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .footer_conteiner{
+        font-size: 14px;
+    }
+    .footer_conteiner{
+        margin:50px 50px 50px 0px;
+        justify-content: space-around;
+    }
+    .column_footer > ul > a{
+        font-weight: bold;
+    }
+    .foter_address{
+        position:absolute;
+        display: flex;
+        bottom: 15%;
+        left: 50px;
+        margin: 0;
+    }
+    .map_footer{
+        justify-content: center;
+        align-items: center;
+        display: contents;
+    }
+    #gmap_canvas{
+        height: 100px;
+        width: 100px;
+        margin-left: 50px;
+    }
+    .footer_menu{
+        display: block;
+    }
+    .author_info{
+        margin-right: 50px;
+        position: unset;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1240px){
+    .footer{
+        height: 35vh;
+    }
+    .about,.candidate,.student,.biznes,.shortcuts{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .footer_conteiner{
+        font-size: 14px;
+    }
+    .footer_conteiner{
+        margin:50px 50px 50px 0px;
+        justify-content: space-around;
+    }
+    .column_footer > ul > a{
+        font-weight: bold;
+    }
+    .foter_address{
+        position:absolute;
+        display: flex;
+        bottom: 15%;
+        left: 50px;
+        margin: 0;
+    }
+    .map_footer{
+        justify-content: center;
+        align-items: center;
+        display: contents;
+    }
+    #gmap_canvas{
+        height: 100px;
+        width: 100px;
+        margin-left: 50px;
+    }
+    .footer_menu{
+        display: block;
+    }
+    .author_info{
+        margin-right: 50px;
+        position: unset;
+    }
+}
+@keyframes unroling{
+    0%{
+        margin-top: -35px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}

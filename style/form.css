@@ -1,0 +1,159 @@
+.content_form{
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form_title{
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.form_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input{ 
+    position:relative; 
+    margin: 10px 40px 10px 40px;
+}
+input,textarea{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    border:none;
+}
+textarea:focus,input:focus{ 
+
+    outline:none;
+}
+
+label,textarea::placeholder{
+    color:#999; 
+    font-size:18px;
+    font-family: inherit;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+textarea:focus ~ label, textarea:valid ~ label,input:focus ~ label, input:valid ~ label{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+}
+
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after{
+    content:'';
+    height:1px; 
+    width:0;
+    bottom:1px;
+
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+.bar:before{
+    left:50%;
+}
+.bar:after{
+    right:50%; 
+}
+
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after,input:focus ~ .bar:before, input:focus ~ .bar:after{
+    width:50%;
+}
+
+.highlight{
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+textarea:focus ~ .highlight  ,input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+    
+}
+
+@-webkit-keyframes inputHighlighter {
+	from {}
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from {}
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from {}
+    to 	{ width:0; background:transparent; }
+}
+.rodo{
+    Vertical-align: middle;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 700px;
+}
+.rodo p{
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.rodo_button{
+    margin-top: 50px;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Muli';
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    background-color: #00b6dc;
+    color: white;
+}
+.rodo_button:focus{
+    outline: none;
+}
+.rodo_button:hover{
+    cursor: pointer;
+}
+@media (max-width: 480px){
+    .nameSurname{
+        flex-direction: column;
+    }
+    .rodo{
+        overflow:unset;
+        margin: 0 10vw;
+        max-width: 300px;
+    }
+
+    .rodo > input{
+        margin-left: 10px;
+    }
+}
+@media (min-width: 480px) and (max-width: 1025px){
+    .input{
+        margin: 20px 0;
+    }
+}

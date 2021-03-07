@@ -1,0 +1,219 @@
+
+
+header{
+    text-decoration: none;
+    z-index: 10;
+
+}
+.header{
+    background-color: transparent;
+    padding:0 12%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0px;
+}
+.menu-icon{
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.scroll_header{
+    background-color: rgba(102, 48, 48, 0.658);
+    animation: scale-nav 0.5s both;
+}
+.scroll_headerReplace{
+    background-color: transparent;
+    animation: none;
+}
+.nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav > li > a{
+    color: white;
+    font-size: 18px;
+    font-family: 'Muli';
+    
+    text-decoration: none;
+    margin: 0 45px;
+}
+.header_logoImage{
+    max-width: 100px;
+    
+}
+.header_logoImageScale{
+    animation: scale-logo 0.5s both;
+}
+
+@keyframes scale-logo{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes scale-nav{
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+                background-color: transparent;
+    }
+    100% {
+        -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+                background-color: rgba(0, 0, 0, 0.582);
+    }
+}
+
+/* mobile */
+.burger{
+    margin: 3px;
+    background-color: white;
+    width: 30px;
+    height: 4px;
+}
+
+
+@media (max-height: 480px){
+    .header_logoImage{
+        max-width: 50px;
+    }
+    .header{
+        padding:0 5%;
+        padding-top: 20px;
+    }
+    .burger{
+        margin: 3px;
+        background-color: white;
+        width: 30px;
+        height: 3px;
+    }
+    
+}
+@media (max-width: 480px){
+    .header{
+        padding-top: 10px;
+    }
+    .header_logoImage{
+        max-width: 80px;
+    }
+    .scroll_header{
+        animation: scale-nav 0.5s both;
+    }
+    .nav_box{
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        position:absolute;
+        top: 0;
+        left: 0;
+    }
+    .nav{
+        list-style: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:flex-end;
+    }
+    .nav > li{
+        margin: 3vh 0 3vh 0;
+    }
+    
+    .menu-icon{
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        margin-left: 50%;
+        position: relative;
+    }
+    @keyframes scale-nav{
+        0% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                    background-color: transparent;
+        }
+        100% {
+            -webkit-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                    background-color: rgba(0, 0, 0, 0.582);
+        }
+    }
+    .navActive{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        animation: rollupNav 1s both;
+        animation-timing-function: cubic-bezier(.01,1.02,.88,.99);
+        background-color: rgba(102, 48, 48, 0.658);
+        backdrop-filter: blur(6px);
+        
+    }
+}
+@media (min-width: 480px) and (max-width: 1025px){
+    .nav_box{
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        position:absolute;
+        top: 0;
+        left: 0;
+    }
+    .nav{
+        list-style: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:flex-end;
+    }
+    .nav > li{
+        margin: 3vh 0 3vh 0;
+    }
+    .nav > li > a{
+        font-size: 30px;
+    }
+    .menu-icon{
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        margin-left: 75%;
+        position: relative;
+    }
+    .navActive{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        animation: rollupNav 1s both;
+        animation-timing-function: cubic-bezier(.01,1.02,.88,.99);
+        background-color: rgba(102, 48, 48, 0.658);
+
+    }
+}
+
+@keyframes rollupNav{
+    0%{
+        display: none;
+        margin-top: -100vh;
+    }
+    99%{
+        display: flex;
+        margin: 0;
+    }
+    100%{
+        backdrop-filter: blur(6px);
+        display: flex;
+        margin: 0;
+    }
+}
