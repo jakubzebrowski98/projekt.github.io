@@ -132,11 +132,10 @@ footer{
         font-weight: bold;
     }
     .foter_address{
-        position:absolute;
+        position:relative;
         display: flex;
-        bottom: 15%;
-        left: 50px;
-        margin: 0;
+        flex-direction: column;
+        margin-left: 50px;
     }
     .map_footer{
         justify-content: center;
@@ -156,9 +155,9 @@ footer{
         position: unset;
     }
 }
-@media (min-width: 1000px) and (max-width: 1240px){
+@media (min-width: 1024px) and (max-width: 1240px){
     .footer{
-        height: 35vh;
+        height: unset;
     }
     .about,.candidate,.student,.biznes,.shortcuts{
         font-size: 16px;
@@ -175,11 +174,10 @@ footer{
         font-weight: bold;
     }
     .foter_address{
-        position:absolute;
+        position:relative;
         display: flex;
-        bottom: 15%;
-        left: 50px;
-        margin: 0;
+        flex-direction: column;
+        margin-left: 50px;
     }
     .map_footer{
         justify-content: center;

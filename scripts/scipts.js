@@ -124,9 +124,10 @@ document.querySelector(".shortcuts").addEventListener("click",() =>{
 
 document.querySelector(".wideo_foreground").addEventListener("click",() =>{
     document.querySelector(".pop_upWideo").classList.toggle("pop_upWideoActive");
+    
 });
 document.querySelector(".pop_upWideo").addEventListener("click",() =>{
-    document.querySelector(".pop_upWideo").classList.toggle("pop_upWideoActive");
+    document.querySelector(".pop_upWideo").classList.toggle("pop_upWideoActive");   
 });
 
 //rollup nav
@@ -155,7 +156,7 @@ rodo_button.addEventListener("click", event =>{
 
     const err = valide();
     if(err.length === 0){
-        console.log(err);
+
         sendMessage();
         
     }else{
