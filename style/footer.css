@@ -115,7 +115,7 @@ footer{
 }
 @media (min-width: 750px) and (max-width: 1024px){
     .footer{
-        height: 50vh;
+        height: 100%;
     }
     .about,.candidate,.student,.biznes,.shortcuts{
         font-size: 16px;
@@ -157,7 +157,7 @@ footer{
 }
 @media (min-width: 1024px) and (max-width: 1240px){
     .footer{
-        height: unset;
+        height: 100%;
     }
     .about,.candidate,.student,.biznes,.shortcuts{
         font-size: 16px;
